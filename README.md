@@ -94,3 +94,22 @@ ChefDK
 
   - To add a role to a recipe thats already defined
   `knife node run_list add web-node1 'role[base]' --before 'recipe[firt_cookbook_nginx::default]'`
+
+  - Environments
+    * Set your editor
+    `export EDITOR=$(which vi)` (Add to .bash_profile if needed)
+
+    * `knife environment create staging --description '<description>`
+
+    * To list all available environments `knife environment list`
+
+    * To add a node to an Env
+    `knife node environment_set <node-name> <env-name>`
+
+    * To verify
+    `knife node show web-node1 -a environment`
+    (-a means attribute <attribute-name>)
+
+  - Attributes (Coming soon)
+
+  - Dta bags (Coming soon)
